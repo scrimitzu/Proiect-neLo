@@ -94,10 +94,20 @@ Cauta Rezervare | neLo - Online Lodging
 		$gotSearchResult = false;
 		$idgenrator = 0;
 		$ik=1;
+
+    $overbooking = [];
+
 		foreach($nelosearch->roomType as $room_type){
 			foreach($nelosearch->multiCapacity as $capid => $capvalues){
+        
 				$room_result = $nelosearch->getAvailableRooms($room_type['rtid'], $room_type['rtname'], $capid);
-				if(intval($room_result['roomcnt']) > 0){
+        $overbooking[$capid]=$room_result['roomcnt'];
+
+        if($capid > 6 && $overbooking[$capid-3] > 0){
+          continue;
+        }
+
+        if(intval($room_result['roomcnt']) > 0){
 					$gotSearchResult = true;
 					echo '<script> $(document).ready(function() { ';
 					echo '$("#'.str_replace(" ","",$room_type['rtid']).'_'.str_replace(" ","",$capid).$ik.'").click(function () {

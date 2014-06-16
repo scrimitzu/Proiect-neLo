@@ -226,13 +226,13 @@ $(document).ready(function(){
    <p style="text-align:center; color: #dedede; font-family: Century Gothic, sans-serif; !important; font-size: 13px !important;">
     &copy; Copyright 2014 Facultatea de Informatica Iasi.<br />Proiect realizat pentru disciplina TW 
 	<br />
-	Jicman Gabriel, Tudor Stefan, Razvan Lozneanu
+	Jicman Gabriel, Tudor Stefan Scriminti, Razvan Lozneanu
 	</p>
 
 
 </div>
 
 </div><!-- SFARSIT FOOTER -->
-
+<div id="bottomstuff"><img src="keep-calm-and-book-now-5.png" /></div>
 </body>
 </html>

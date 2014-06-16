@@ -301,6 +301,30 @@ div.hr {
 	padding:2px 0 0 0;
 	}
 	
+#bottomstuff {
+
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 100%;
+    -webkit-animation : pulse 6s infinite;
+
+}
+@-webkit-keyframes pulse {
+    from {
+        transform : scale(1);
+        opacity   : 1;
+    }
+    50% {
+        transform : scale(0.75);
+        opacity   : 0.0;
+    }
+    to {
+        transform : scale(1);
+        opacity   : 1;
+    }
+}
+
 .social {
 	padding:0;
 	}
